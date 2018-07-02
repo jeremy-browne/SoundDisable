@@ -1,6 +1,5 @@
 # Author: Jeremy Browne
 # Created: 18 MAY 18
-# Last Updated: 18 MAY 18
 
 # Set the registry paths for the connect, disconnect and notification sounds
 $regPathConnect = "HKCU:\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current"
@@ -12,7 +11,7 @@ $conPathTest = Test-Path $regPathConnect
 $disconPathTest = Test-Path $regPathDisconnect
 $notificationPathTest = Test-Path $regPathNotification
 
-# Function to check if launcher is running
+# Function to check if launcher is running. Change the -Name parameter to an application of your choice.
 function Get-LauncherStatus {
     $isLauncherRunning = Get-Process -Name ZLVR* -ErrorAction SilentlyContinue
     if ($isLauncherRunning -ne $null){
