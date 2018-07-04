@@ -13,7 +13,7 @@ $notificationPathTest = Test-Path $regPathNotification
 
 # Function to check if launcher is running. Change the -Name parameter to an application of your choice.
 function Get-LauncherStatus {
-    $isLauncherRunning = Get-Process -Name ZLVR* -ErrorAction SilentlyContinue
+    $isLauncherRunning = Get-Process -Name "YOUR_PROCESS_NAME_HERE" -ErrorAction SilentlyContinue
     if ($isLauncherRunning -ne $null){
         Write-Host "Launcher found... Disabling USB sounds" -ForegroundColor Red
         Disable-USBSounds
